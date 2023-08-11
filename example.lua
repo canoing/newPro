@@ -1,4 +1,3 @@
----@diagnostic disable: lowercase-global
 -- Una compañia vende sillas a $50, un cliente compra 6 sillas, ¿Cuánto paga el cliente? 
 
 
@@ -17,10 +16,10 @@ CalcularPrecio(50, 6)
 
 -- Tambien podemos hacerlo de esta forma
 print('Valor de las sillas: $')
-local vSiallas = io.read()
+local ValorSiallas = io.read()
 
 print('Cantidad de sillas')
-local cSillas = io.read()
+local CantidadSillas = io.read()
 
-vTotal = vSiallas * cSillas
-print('El valor de las sillas es :$'..vTotal)
+ValorTotal = valorSillas * CantidadSillas
+print('El valor de las sillas es :$'..ValorTotal)
