@@ -5,7 +5,10 @@
 }
 
 body {
+    display: flex;
     min-height: 100vh;
+    position: relative;
+    flex-direction: column;
 }
 
 main {
@@ -161,10 +164,9 @@ input {
 /* === Footer === */
 
 footer {
-    bottom: -0;
     width: 100%;
     display: flex;
-    position: absolute;
+    margin-top: auto;
     justify-content: space-between;
     background-color: rgb(30, 30, 30);
     border-top: 20px solid rgb(20, 20, 20);
