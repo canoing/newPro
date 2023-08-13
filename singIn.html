@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="es">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="styleSingIn.css">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,7 @@
                 <input type="password" name="Contraseña" id="Password" placeholder="Contraseña" required>
 
                 <!-- BOTON PARA VER CONTRASEÑA -->
-                <script scr = "singlnJs.js"></script>
+                
                 <button onclick="ojo()" type="button" id="verPass">👁‍🗨</button>
                 
                 <!-- BOTON PARA VER CONTRASEÑA -->
@@ -54,7 +55,8 @@
 
             <!-- submit -->
             <div class="submit">
-                <input type="submit" value="Iniciar Sesión" id="botonIniciar">
+                <input onclick="ir()" type="submit" value="Iniciar Sesión" id="botonIniciar">
+                <script scr = "singlnJs.js"></script>
             </div>
 
             <!-- crear cuenta -->
@@ -77,5 +79,9 @@
         </div>
     </footer>
 </body>
+
+    <!-- LLAMAR HOJA DE SCRIPT JS -->
+    <script src="SingInJs.js"></script>
+    <!-- USA EL MISMO NOMBRE -->
 
 </html>

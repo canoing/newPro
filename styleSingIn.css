@@ -71,6 +71,103 @@ main {
     justify-content: center;
 }
 
+/* Signin */
+.singIn {
+    width: 500px;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    border: 7px solid rgb(20, 20, 20);
+}
+
+.title {
+    cursor: default;
+    text-align: center;
+    color: whitesmoke;
+    border-bottom: 5px solid rgb(20, 20, 20);
+}
+
+input {
+    color: whitesmoke;
+}
+
+/* Email */
+.mail {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+#email {
+    width: 75%;
+    border: none;
+    background: none;
+    text-align: center;
+    border-bottom: 1px solid silver;
+}
+
+/* Password */
+
+.contraseña {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+#Password {
+    width: 75%;
+    border: none;
+    background: none;
+    text-align: center;
+    border-bottom: 1px solid silver;
+}
+
+/* ======BOTON PARA VER CONTRASEÑA====== */
+#verPass {
+    background: none;
+    border-radius: 10px;
+}
+
+/* ======BOTON PARA VER CONTRASEÑA====== */
+
+
+/* RecuperarContraseña */
+
+.recuperarCont {
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+/* boton de bula */
+
+.submit {
+    display: flex;
+    margin: 20px 0 20px 0;
+    justify-content: center;
+}
+
+#botonIniciar {
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+#botonIniciar:hover {
+    transform: scale(1.2);
+}
+
+/* crear cuenta */
+
+.crearCuenta {
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+}
+
 /* === Footer === */
 
 footer {
