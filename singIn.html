@@ -11,6 +11,8 @@
 </head>
 
 <body>
+ 
+    <script scr = "matrix.js"></script>
     <header>
         <div class="logo">
             <img src="./icon.ico" alt="FiccaseIcon">
@@ -23,6 +25,7 @@
         </nav>
     </header>
     <main>
+  
         <!-- Interfaz -->
         <form class="singIn">
             <div class="title">
@@ -39,7 +42,9 @@
                 <input type="password" name="Contraseña" id="Password" placeholder="Contraseña" required>
 
                 <!-- BOTON PARA VER CONTRASEÑA -->
-                <button type="button" id="verPass">👁‍🗨</button>
+                
+                <button onclick="ojo()" type="button" id="verPass">👁‍🗨</button>
+                
                 <!-- BOTON PARA VER CONTRASEÑA -->
             </div>
 
@@ -50,7 +55,8 @@
 
             <!-- submit -->
             <div class="submit">
-                <input type="submit" value="Iniciar Sesión" id="botonIniciar">
+                <input onclick="ir()" type="submit" value="Iniciar Sesión" id="botonIniciar">
+                <script scr = "singlnJs.js"></script>
             </div>
 
             <!-- crear cuenta -->
