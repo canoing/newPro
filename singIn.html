@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 
@@ -20,7 +20,7 @@
         </div>
         <nav class="navbar">
             <ul>
-                <a href="#">Cuenta</a>
+                <a href="#">Account</a>
             </ul>
         </nav>
     </header>
@@ -29,46 +29,31 @@
         <!-- Interfaz -->
         <form class="singIn">
             <div class="title">
-                <h1>Iniciar Sesión</h1>
+                <h1>Log In</h1>
             </div>
 
             <!-- email -->
             <div class="mail">
-                <input type="email" name="E-mail" id="email" placeholder="E-Mail" required>
+                <input type="text" name="Code" id="CodeInv" placeholder="Invitation Code" required>
             </div>
 
-            <!-- Contraseña -->
-            <div class="contraseña">
-                <input type="password" name="Contraseña" id="Password" placeholder="Contraseña" required>
-
-                <!-- BOTON PARA VER CONTRASEÑA -->
-                
-                <button onclick="ojo()" type="button" id="verPass">👁‍🗨</button>
-                
-                <!-- BOTON PARA VER CONTRASEÑA -->
-            </div>
-
-            <!-- Recurerar contraseña -->
-            <div class="recuperarCont">
-                ¿Olvidó su contraseña? <a href="#">Recuperar contraseña</a>
+            <!-- Generar Código -->
+            <div class="GenerarCódigo">
+                <a href="#">Generate invitation code</a>
             </div>
 
             <!-- submit -->
             <div class="submit">
                 <input onclick="ir()" type="submit" value="Iniciar Sesión" id="botonIniciar">
-                <script scr = "singlnJs.js"></script>
+                <script scr ="singlnJs.js"></script>
             </div>
 
-            <!-- crear cuenta -->
-            <div class="crearCuenta">
-                ¿Aún no tienes cuenta? <a href="#">Crear Cuenta</a>
-            </div>
         </form>
     </main>
     <footer>
         <div class="contactos">
             <ul>
-                <h3>Contactos</h3>
+                <h3>Contacts</h3>
                 <a href="#">Shadow Ewegeft</a>
                 <br>
                 <a href="#">José Vaca</a>

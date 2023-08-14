@@ -8,7 +8,7 @@
         display: flex;
         min-height: 100vh;
         flex-direction: column;
-    
+
         & main {
             padding: 20px 20px 0 20px;
         }
@@ -16,6 +16,58 @@
 }
 
 /* El bula es gei */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inicio de sesión */
+.singIn {
+    background-color: rgb(30, 30, 30);
+    border-radius: 20px;
+
+    & .title {
+        border-bottom: 5px solid rgb(20, 20, 20);
+        padding: 15px;
+
+        & h1 {
+            text-align: center;
+        }
+    }
+
+    & div {
+        padding: 5px 20px 5px 20px;
+        justify-content: center;
+        display: flex;
+
+        &.submit {
+            padding: 20px;
+
+            & #botonIniciar {
+                background: none;
+                height: 30px;
+                border-radius: 10px;
+                background-color: rgb(20, 20, 20);
+            }
+        }
+
+        & input {
+            width: 80%;
+            height: 40px;
+        }
+    }
+
+    & .mail{
+        padding: 20px 0 20px 0;
+        & #CodeInv{
+            background: none;
+            border: none;
+            text-align: center;
+        }
+    }   
+}
 
 /* === Header === */
 
@@ -36,10 +88,10 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    header{
+    header {
         flex-direction: row;
     }
-    
+
 }
 
 .logo {
@@ -54,7 +106,20 @@ header {
     &:hover {
         transform: scale(1.2);
         filter: drop-shadow(0 0 90px gold);
-        
+
+    }
+}
+
+/* Navbar */
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.5s;
+
+    &:hover {
+        color: goldenrod;
+        filter: drop-shadow(0 0 20px gold);
     }
 }
 
@@ -73,7 +138,7 @@ footer {
 .contactos {
     color: whitesmoke;
     margin: 0 30px 10px 30px;
-    
+
 
     & a {
         text-decoration: none;
@@ -84,7 +149,7 @@ footer {
 .contactos a:hover {
     color: goldenrod;
     filter: drop-shadow(0 0 30px gold);
-    
+
 }
 
 .copyright {
