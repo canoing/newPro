@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     font-family: Consolas;
+    color: whitesmoke;
+
+    & body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    
+        & main {
+            padding: 20px 20px 0 20px;
+        }
+    }
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
 
-main {
-    padding: 20px 20px 0 20px;
-}
 
 /* === Header === */
 
@@ -20,10 +23,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 20px 20px;
+    padding: 10px 20px 20px 20px;
     justify-content: space-between;
     background-color: rgb(30, 30, 30);
     border-bottom: 20px solid rgb(20, 20, 20);
+
+    & img {
+        width: auto;
+        height: 40px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -31,11 +39,6 @@ header {
         flex-direction: row;
     }
     
-}
-
-header img {
-    width: auto;
-    height: 80px;
 }
 
 .logo {
@@ -46,10 +49,10 @@ header img {
     transition: all 0.5s;
     padding: 9px 0 9px 0;
     text-shadow: -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black, 1px 1px 0 black;
-}
 
-.logo:hover {
-    transform: scale(1.2);
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 /* === Navbar === */
@@ -57,11 +60,14 @@ header img {
 nav a {
     color: whitesmoke;
     text-decoration: none;
-}
 
-nav a:hover {
+    &:hover {
     color: goldenrod;
 }
+}
+
+
+
 
 /* === Main === */
 
@@ -86,11 +92,10 @@ footer {
 .contactos {
     color: whitesmoke;
     margin: 0 30px 10px 30px;
-}
 
-.contactos a {
-    color: whitesmoke;
-    text-decoration: none;
+    & a {
+        text-decoration: none;
+    }
 }
 
 .contactos a:hover {
@@ -99,7 +104,6 @@ footer {
 
 .copyright {
     margin-right: 30px;
-    color: whitesmoke;
     align-items: center;
     margin: 10px 30px 10px 30px;
 }
