@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     font-family: Consolas;
+    color: whitesmoke;
+
+    & body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    
+        & main {
+            padding: 20px 20px 0 20px;
+        }
+    }
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
 
-main {
-    padding: 20px 20px 0 20px;
-}
 
 /* === Header === */
 
@@ -20,10 +23,16 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px 20px 20px;
+    padding: 10px 20px 20px 20px;
     justify-content: space-between;
     background-color: rgb(30, 30, 30);
     border-bottom: 20px solid rgb(20, 20, 20);
+
+    & img {
+        width: auto;
+        height: 40px;
+        filter: drop-shadow(1px 1px 10px black);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -31,11 +40,6 @@ header {
         flex-direction: row;
     }
     
-}
-
-header img {
-    width: auto;
-    height: 80px;
 }
 
 .logo {
@@ -46,126 +50,12 @@ header img {
     transition: all 0.5s;
     padding: 9px 0 9px 0;
     text-shadow: -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black, 1px 1px 0 black;
-}
 
-.logo:hover {
-    transform: scale(1.2);
-}
-
-/* === Navbar === */
-
-nav a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: goldenrod;
-}
-
-/* === Main === */
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Signin */
-.singIn {
-    width: 500px;
-    border-radius: 10px;
-    justify-content: center;
-    background-color: rgb(30, 30, 30);
-    border: 7px solid rgb(20, 20, 20);
-}
-
-.title {
-    cursor: default;
-    text-align: center;
-    color: whitesmoke;
-    border-bottom: 5px solid rgb(20, 20, 20);
-}
-
-input {
-    color: whitesmoke;
-}
-
-/* Email */
-.mail {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 20px 0;
-}
-
-#email {
-    width: 75%;
-    border: none;
-    background: none;
-    text-align: center;
-    border-bottom: 1px solid silver;
-}
-
-/* Password */
-
-.contraseña {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 20px 0;
-}
-
-#Password {
-    width: 75%;
-    border: none;
-    background: none;
-    text-align: center;
-    border-bottom: 1px solid silver;
-}
-
-/* ======BOTON PARA VER CONTRASEÑA====== */
-#verPass {
-    background: none;
-    border-radius: 10px;
-}
-
-/* ======BOTON PARA VER CONTRASEÑA====== */
-
-
-/* RecuperarContraseña */
-
-.recuperarCont {
-    display: flex;
-    color: whitesmoke;
-    justify-content: center;
-}
-
-/* boton de bula */
-
-.submit {
-    display: flex;
-    margin: 20px 0 20px 0;
-    justify-content: center;
-}
-
-#botonIniciar {
-    width: 200px;
-    height: 30px;
-    cursor: pointer;
-    background: none;
-    border-radius: 10px;
-    transition: all 0.4s;
-}
-
-#botonIniciar:hover {
-    transform: scale(1.2);
-}
-
-/* crear cuenta */
-
-.crearCuenta {
-    display: flex;
-    color: whitesmoke;
-    justify-content: center;
+    &:hover {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 90px gold);
+        
+    }
 }
 
 /* === Footer === */
@@ -183,20 +73,22 @@ footer {
 .contactos {
     color: whitesmoke;
     margin: 0 30px 10px 30px;
-}
+    
 
-.contactos a {
-    color: whitesmoke;
-    text-decoration: none;
+    & a {
+        text-decoration: none;
+        transition: all 0.5s;
+    }
 }
 
 .contactos a:hover {
     color: goldenrod;
+    filter: drop-shadow(0 0 30px gold);
+    
 }
 
 .copyright {
     margin-right: 30px;
-    color: whitesmoke;
     align-items: center;
     margin: 10px 30px 10px 30px;
 }
