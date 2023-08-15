@@ -18,9 +18,8 @@
 /* El bula es gei */
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 
 /* Inicio de sesión */
