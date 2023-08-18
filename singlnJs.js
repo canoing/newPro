@@ -1,5 +1,10 @@
-confirm('A no seas mamón, voy a coger *risa de Ibai*')
 
 function ir() {
-    window.location.href = 'main.html'
+    var codeInput = document.getElementById("CodeInv");
+
+    if (codeInput.value.trim() !== "") {
+        window.location.href = 'main.html';
+    }
 }
+
+
