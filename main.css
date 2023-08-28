@@ -3,20 +3,7 @@
     padding: 0;
     font-family: Consolas;
 
-    & body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-
-        & main {
-            padding: 20px 20px 0 20px;
-            display: flex;
-            flex-direction: row;
-        }
-    }
-}
-
-
+}    
 
 /* === Header === */
 
@@ -76,10 +63,14 @@ header {
 
 /* Post */
 
+main{
+    min-height: 100vh;
+    padding: 20px;
+}
+
 .news{
     float: left;
     width: 40%;
-    margin: 0 20px 0 20px;
     
     & legend{
         color: #000;
@@ -92,8 +83,8 @@ header {
 
 .post{
     float: right;
-    width: 60%;
-    margin: 0 20px 0 20px;
+    min-width: 58%;
+    margin-left: 5px;
 
     & div{
         margin: 20px 0 20px 0;
