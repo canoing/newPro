@@ -243,6 +243,7 @@ main {
 }
 
 @media (max-width: 650px){
+    
     .createPost{
         flex-direction: column;
         display: flex;
