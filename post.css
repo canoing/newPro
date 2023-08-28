@@ -199,6 +199,7 @@ main {
     padding: 20px;
     border: 10px solid #141414;
     border-radius: 1em;
+    position: relative;
 
     & .title {
         display: flex;
@@ -237,6 +238,25 @@ main {
             margin: 12px 0 12px 0;
             height: 50px;
             color: white;
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .createPost{
+        flex-direction: column;
+        display: flex;
+        height: 400px;
+
+        & .load{
+            width: 87%;
+            height: 60px;
+        }
+
+        & .options{
+            width: 87%;
+            height: 170px;
+
         }
     }
 }
