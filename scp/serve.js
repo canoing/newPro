@@ -15,8 +15,7 @@ app.use(express.urlencoded({extended:false}))
 // rutas
 app.get('/', (req,res ) => {
 
-res.send("XD")
-
+    res.sendFile(path.join(__dirname, 'views', 'registro.html'));
 
 }
 )
