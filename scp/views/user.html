@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="styleSingIn.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficcase</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./icon.ico" alt="FiccaseIcon">
+            <h1>Ficcase</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <a href="#">Account</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Interfaz -->
+        <form class="singIn">
+            <div class="title">
+                <h1>Log In </h1>
+            </div>
+
+            <!-- code  -->
+            <div class="mail">
+                <!-- This code snippet is a part of an HTML form that allows users to enter an invitation code. It consists of an input field with the name "Code" and the id "CodeInv". The input field has a placeholder text "Invitation Code" and is required for form submission. -->
+
+                <input type="text" name="contraseña" id="contraseña" placeholder="Invitation Code" required>
+            </div>
+
+            <!-- submit -->
+            <div class="submit">
+
+                <input onclick="ir()" type="submit" value="Iniciar Sesión" id="botonIniciar">
+   
+                <!-- LLAMAR HOJA DE SCRIPT JS -->
+           
+                <!-- USA EL MISMO NOMBRE -->
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <div class="contactos">
+            <ul>
+                <h3>Contacts</h3>
+                <a href="https://www.youtube.com/channel/UC85vRJe6PxO3P5wHntgOJuw" target="_blank">Shadow Ewegeft</a>
+                <br>
+                <a href="https://www.youtube.com/@cano1812" target="_blank">José Vaca</a>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; I.P.P. 2023</p>
+        </div>
+    </footer>
+</body>
+<script src="singlnJs.js"></script>
+<script src="../database.js"></script>
+<script src="index.js"></script>
+<script src="serve.js"></script>
+</html>

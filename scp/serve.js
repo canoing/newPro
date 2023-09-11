@@ -15,10 +15,11 @@ app.use(express.urlencoded({extended:false}))
 // rutas
 app.get('/', (req,res ) => {
 
-    res.sendFile(path.join(__dirname, 'views', 'registro.html'));
+    res.sendFile(path.join(__dirname, 'views', 'user.html'));
 
 }
 )
+
 // estico
 app.use(express.static(path.join(__dirname,"public")))
 
