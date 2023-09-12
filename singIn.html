@@ -30,24 +30,14 @@
             <div class="title">
                 <h1>Log In </h1>
             </div>
-
-            <!-- code  -->
-            <div class="mail">
-                <!-- This code snippet is a part of an HTML form that allows users to enter an invitation code. It consists of an input field with the name "Code" and the id "CodeInv". The input field has a placeholder text "Invitation Code" and is required for form submission. -->
-
-                <input type="text" name="Code" id="CodeInv" placeholder="Invitation Code" required>
+            <div class="login_data">
+                <input type="text" placeholder="name" required class="user_data">
+                <input type="password" placeholder="Password" required class="user_data">
+                <input type="email" placeholder="E-mail" class="user_data">
             </div>
-
-            <!-- submit -->
             <div class="submit">
-
                 <input onclick="ir()" type="submit" value="Iniciar Sesión" id="botonIniciar">
-   
-                <!-- LLAMAR HOJA DE SCRIPT JS -->
-           
-                <!-- USA EL MISMO NOMBRE -->
             </div>
-
         </form>
     </main>
     <footer>
@@ -68,4 +58,5 @@
 <script src="../database.js"></script>
 <script src="index.js"></script>
 <script src="serve.js"></script>
+
 </html>
