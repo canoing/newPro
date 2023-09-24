@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node scp/index.js",
     "dev": "nodemon scp/index.js"
-     
   },
   "keywords": [],
   "author": "",
