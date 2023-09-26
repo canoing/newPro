@@ -15,17 +15,15 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs'); // Establecer Handlebars como el motor de plantillas predeterminado
 app.set('views', path.join(__dirname, 'views'));
-// rutas
-app.get('/', (req, res) => {
-    res.render('index');
-});
+
 
 // peticion 
 app.use(express.urlencoded({extended:false}))
 
 // variables global 
 
-
+// rutas 
+app.use(require("./routes/index.rountes.js"))
 
 
 
