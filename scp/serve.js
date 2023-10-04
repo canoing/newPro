@@ -1,6 +1,7 @@
  const express = require('express')
 const path = require("path")
 const exphbs = require('express-handlebars');
+const morga = require("morgan")
 // iniciar 
 const app = express()
 // configuracion 
@@ -18,12 +19,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // peticion 
+app.use(morga("dev"))
 app.use(express.urlencoded({extended:false}))
 
 // variables global 
 
 // rutas 
 app.use(require("./routes/index.rountes.js"))
+app.use(require("./routes/notes.rounte.js"))
 
 
 
