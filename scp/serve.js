@@ -2,6 +2,10 @@
 const path = require("path")
 const exphbs = require('express-handlebars');
 const morga = require("morgan")
+const override = require("method-override")
+const flash = require("connect-flash")
+const session = require("express-session")
+
 // iniciar 
 const app = express()
 // configuracion 
@@ -18,15 +22,28 @@ app.set('view engine', '.hbs'); // Establecer Handlebars como el motor de planti
 app.set('views', path.join(__dirname, 'views'));
 
 
+
 // peticion 
 app.use(morga("dev"))
 app.use(express.urlencoded({extended:false}))
+app.use(override("_method"))
+app.use(session({
+    secret : "secreto",
+    resave: true, 
+    saveUninitialized: true
+}))
+app.use(flash())
 
 // variables global 
+app.use((req, res, next)=> {
+  res.locals.published  =  req.flash("published")
+    next()
+})
 
 // rutas 
 app.use(require("./routes/index.rountes.js"))
 app.use(require("./routes/notes.rounte.js"))
+app.use(require("./routes/user.rountrs.js"))
 
 
 

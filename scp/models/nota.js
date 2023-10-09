@@ -16,4 +16,4 @@ const  notas  = new  Schema ({
 
 },{timestamps:true})
 
-module.exports = model("nota",notas, "xd")
+module.exports = model("note",notas)

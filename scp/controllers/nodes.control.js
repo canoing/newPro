@@ -7,34 +7,42 @@ notesctrl.remderformula = (req , res) => {
  
 }
 notesctrl.crearnota = async (req, res) => {
-    const { title , description} = req.body
-   const notanew =  new note({ title,  description} )
-  await notanew.save()
+ const { title , description} =   req.body
+ const nuevanota =  new note({title , description})
+  await nuevanota.save()
+  req.flash("published" , "post published")
 
-    res.send("nota new")
+
+  
+   
+  res.redirect("/notes")
 
 
 }
-notesctrl.remdennotas = (req , res)=> {
-    res.send("en efecto nadie usa esto 🪨")
+notesctrl.remdennotas = async   (req , res)=> {
+    const notes = await note.find().lean()
+    res.render("notas/todas-notas.hbs",{ notes})
 }
 notesctrl.edit = (req, res) => {
 
-    res.send("se va a editar")
+    res.send("se va a editar 'pendiente' " )
 
 
 }
 notesctrl.actu = (req, res) => {
 
-    res.send("se actualizo")
+    res.send("se  va a actualiza  'pendiente' ")
 
 
 }
-notesctrl.deletenota = (req, res) => {
+notesctrl.deletenota =  async (req, res) => {
+   await  note.findByIdAndDelete(req.params.id) 
+   req.flash("published"  , "post delete")
 
-    res.send("no veo nada, no esta haciendo nada ")
+    res.redirect("/notes")
 
 
 }
+
 
 module.exports = notesctrl
