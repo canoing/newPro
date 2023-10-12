@@ -1,6 +1,6 @@
 const { Router } = require("express")
 const router = Router()
-
+const {isAuthenticate} = require("../helpers/auth.js")
 const { 
     remderformula ,
     crearnota ,
@@ -10,15 +10,15 @@ const {
     deletenota
 } = require("../controllers/nodes.control.js")
 // publicacion nuevas
-router.get("/notes/add" , remderformula )
-router.post("/notes/nota-nueva" , crearnota)
+router.get("/notes/add" , isAuthenticate , remderformula )
+router.post("/notes/nota-nueva" ,  isAuthenticate , crearnota)
 // nota echas
-router.get("/notes" ,  remdennotas)
+router.get("/notes" ,  isAuthenticate , remdennotas)
 // editar
-router.get("/notes/edit/:id" , edit )
-router.put("/notes/edit/:id" , actu )
+router.get("/notes/edit/:id" ,  isAuthenticate ,edit )
+router.put("/notes/edit/:id" ,  isAuthenticate ,actu )
 // borra
-router.delete("/notes/delete/:id" , deletenota)
+router.delete("/notes/delete/:id" , isAuthenticate , deletenota)
 
 
 module.exports = router

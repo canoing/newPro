@@ -9,20 +9,21 @@ const userSchema = new Schema({
   email: {
     type: String,
     required: true,
+    unique: true 
   },
-  contraseña: {
+  password : {
     type: String,
     required: true,
   },
 }, { timestamps: true });
 
-userSchema.methods.encrypPassword = async function (contraseña) {
+userSchema.methods.encrypPassword = async function (password ) {
   const salt = await bcrypt.genSalt(15);
-  return await bcrypt.hash(contraseña, salt);
+  return await bcrypt.hash(password , salt);
 };
 
-userSchema.methods.matchpassword = function (contraseña) {
-  return bcrypt.compare(contraseña, this.contraseña);
+userSchema.methods.matchpassword = async function (password ) {
+  return await bcrypt.compare(password , this.password );
 };
 
 module.exports = model("User", userSchema);

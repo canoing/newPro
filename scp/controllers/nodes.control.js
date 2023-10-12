@@ -11,7 +11,7 @@ notesctrl.crearnota = async (req, res) => {
  const nuevanota =  new note({title , description})
   await nuevanota.save()
   req.flash("published" , "post published")
-
+console.log(req.user)
 
   
    
@@ -20,7 +20,7 @@ notesctrl.crearnota = async (req, res) => {
 
 }
 notesctrl.remdennotas = async   (req , res)=> {
-    const notes = await note.find().lean()
+    const notes = await note.find().sort({ createdAt: "desc" }).lean()
     res.render("notas/todas-notas.hbs",{ notes})
 }
 notesctrl.edit = (req, res) => {

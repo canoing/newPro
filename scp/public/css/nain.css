@@ -2,5 +2,25 @@
 /* Cambiar el color del texto en la barra de navegación a blanco */
 
 .navbar {
-    background-color: #12591d !important;
+    background-color: #118a3f !important;
+   
 }
+.custom-alert {
+    background-color: #12591d ; /* Color verde oscuro (código hexadecimal) */
+    color: #ffffff; /* Color del texto (blanco en este caso) */
+    /* Otros estilos personalizados si los necesitas */
+  }
+  .complementary-alert {
+    background-color: rgb(207, 81, 50); /* Color complementario del verde #12591d */
+    color: #ffffff; /* Color del texto (blanco en este caso) */
+    /* Otros estilos personalizados si los necesitas */
+  }
+  /* Todos los botones tendrán fondo verde */
+  /* styles.css */
+.green-button {
+  background-color: #118a3f ;
+  color: white;
+}
+
+
+

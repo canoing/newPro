@@ -1,4 +1,6 @@
+
 const {Schema, model } = require("mongoose")
+
 const  notas  = new  Schema ({
  title: {
     
@@ -9,7 +11,14 @@ const  notas  = new  Schema ({
     type : String,
     require: true
     
+ },
+ user: {
+   type : String,
+   require: true
+   
  }
+
+
  
 
 

@@ -1,8 +1,17 @@
 {{#if published }}
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div class="alert custom-alert alert-dismissible fade show" role="alert">
   {{published }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 {{/if}}
+{{#if error }}
+<div class="complementary-alert alert alert-dismissible fade show" role="alert">
+  {{error}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
