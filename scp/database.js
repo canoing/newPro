@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 
-const mongo_url = process.env.NOTES_APP_MONGODB_HOST
+const mongo_url = "mongodb+srv://josebulac960:7XgZywrJrfElkI41@iedosocial.0uqhgqe.mongodb.net/?retryWrites=true&w=majority"
 
 
 
