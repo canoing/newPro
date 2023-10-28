@@ -5,6 +5,7 @@ const mongo_url = process.env.NOTES_APP_MONGODB_HOST
 
 
 
+
 mongoose.connect(mongo_url, {
 
 
