@@ -13,7 +13,7 @@ const {
 router.get("/notes/add" , isAuthenticate , remderformula )
 router.post("/notes/nota-nueva" ,  isAuthenticate , crearnota)
 // nota echas
-router.get("/notes" ,  isAuthenticate , remdennotas)
+router.get("/notes"  , remdennotas)
 // editar
 router.get("/notes/edit/:id" ,  isAuthenticate ,edit )
 router.put("/notes/edit/:id" ,  isAuthenticate ,actu )
