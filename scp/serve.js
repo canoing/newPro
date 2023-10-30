@@ -5,6 +5,7 @@ const morga = require("morgan")
 const override = require("method-override")
 const flash = require("connect-flash")
 const session = require("express-session")
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 const passport = require('passport');
 
@@ -23,7 +24,17 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs'); // Establecer Handlebars como el motor de plantillas predeterminado
 app.set('views', path.join(__dirname, 'views'));
-
+const store = new MongoDBStore({
+    uri: process.env.NOTES_APP_MONGODB_HOST, // Reemplaza con la URI de tu base de datos MongoDB
+    collection: 'sessions' // Nombre de la colección de sesiones en MongoDB
+  });
+  
+  app.use(session({
+    secret: 'tu_secreto',
+    resave: false,
+    saveUninitialized: false,
+    store: store
+  }));
 
 
 // peticion 
