@@ -24,14 +24,22 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs'); // Establecer Handlebars como el motor de plantillas predeterminado
 app.set('views', path.join(__dirname, 'views'));
+const store = new MongoDBStore({
+    uri: process.env.NOTES_APP_MONGODB_HOST, // Reemplaza con la URI de tu base de datos MongoDB
+    collection: 'users' // Nombre de la colección de sesiones en MongoDB
+  });
+  
 
 
 // peticion 
-const store = new MongoDBStore({
-    uri: process.env.NOTES_APP_MONGODB_HOST, // Reemplaza con la URI de tu base de datos MongoDB
-    collection: "users" // Nombre de la colección de sesiones en MongoDB
-  });
- 
+app.use(morga("dev"))
+app.use(express.urlencoded({extended:false}))
+app.use(override("_method"))
+app.use(session({
+    secret : "secreto",
+    resave: true, 
+    saveUninitialized: true
+}))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash())
