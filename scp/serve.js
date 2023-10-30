@@ -28,14 +28,7 @@ const store = new MongoDBStore({
     uri: process.env.NOTES_APP_MONGODB_HOST, // Reemplaza con la URI de tu base de datos MongoDB
     collection: 'sessions' // Nombre de la colección de sesiones en MongoDB
   });
-  
-  app.use(session({
-    secret: 'tu_secreto',
-    resave: false,
-    saveUninitialized: false,
-    store: store
-  }));
-
+ 
 
 // peticion 
 app.use(morga("dev"))
